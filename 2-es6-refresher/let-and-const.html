@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Let dan Const</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Var | let & const
+
+      // Hoisting
+      console.log(nama);
+      var nama;
+
+      // console.log(nama2);
+      // let nama2; // result: error
+
+      // scope variable
+      var name = "Hollow Project"; //global variable
+      if (true) {
+        console.log(name);
+      }
+
+      function test() {
+        var a = 4; // local variable
+        console.log(a);
+        console.log(name);
+      }
+
+      test();
+
+      // const a = 5;
+      // a = 6;
+      // console.log(a); // result: error
+    </script>
+  </body>
+</html>

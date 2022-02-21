@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Higher Order Function</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // map
+      const fruits = [
+        {
+          id: 1,
+          name: "Apple",
+          price: 2000,
+        },
+        {
+          id: 2,
+          name: "Banana",
+          price: 3000,
+        },
+        {
+          id: 3,
+          name: "Cherry",
+          price: 4000,
+        },
+      ];
+      // const fruitName = fruits.map(function (item) {
+      //   return item.name;
+      // });
+      const fruitName = fruits.map((item) => item.name);
+      console.log(fruitName);
+
+      // Filter
+      const apple = fruits.filter((item) => item.name !== "Apple");
+      console.log(apple);
+
+      // Find
+      const cherry = fruits.find((item) => item.name === "Cherry");
+      console.log(cherry);
+
+      // Reduce
+      const totalPrice = fruits.reduce(
+        (total, currentItem) => total + currentItem.price,
+        0
+      );
+      console.log(totalPrice);
+    </script>
+  </body>
+</html>

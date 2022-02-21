@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Generator</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // function biasa() {
+      //   return 1;
+      // }
+      // console.log(biasa());
+
+      /* FUNCTION GENERATOR */
+      function* generator() {
+        yield 1;
+        yield 2;
+        yield 3;
+        return 4;
+      }
+
+      const gen = generator();
+      console.log(gen.next().value);
+      console.log(gen.next().value);
+      console.log(gen.next());
+      console.log(gen.next());
+    </script>
+  </body>
+</html>

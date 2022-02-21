@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Class and Subclass</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* Class */
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        // method sapa: greet
+        greet() {
+          return `Hello ${this.name}, you are ${this.age} now!`;
+        }
+      }
+
+      const budi = new Person("Budi", 23);
+      console.log(budi.name);
+      console.log(budi.greet());
+
+      /* Subclass */
+      class Member extends Person {
+        constructor(name, age, memberId) {
+          super(name, age);
+          this.memberId = memberId;
+        }
+      }
+
+      const andi = new Member("Andi", 19, "M123");
+      console.log(andi.memberId);
+    </script>
+  </body>
+</html>
